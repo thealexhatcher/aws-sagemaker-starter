@@ -1,1 +1,1 @@
-# aws-sagemaker-starter
+# aws-vscode-devcontainer-python

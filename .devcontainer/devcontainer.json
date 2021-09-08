@@ -1,0 +1,25 @@
+{
+	"name": "AWS Sagemaker Starter",
+	"dockerFile": "Dockerfile",
+	"settings": { 
+		"terminal.integrated.profiles.linux": {
+			"bash": {
+				"path": "bash",
+				"icon": "star",
+				"env": {
+					"PLACEHOLDER": "place_holder"
+				}
+			},
+		},
+		"terminal.integrated.defaultProfile.linux": "bash",
+		"python.pythonPath": "python3",
+		"python.linting.pylintEnabled": true,
+		"python.linting.pylintPath": "pylint",
+		"python.linting.enabled": true
+	},
+	"remoteUser": "vscode",
+	"postCreateCommand": "pip install -r src/requirements.txt",
+	"extensions": [
+		"ms-python.python",
+	],
+}
