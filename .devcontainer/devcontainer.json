@@ -12,14 +12,19 @@
 			},
 		},
 		"terminal.integrated.defaultProfile.linux": "bash",
-		"python.pythonPath": "python3",
+		"terminal.integrated.cwd": "${workspaceFolder}",
+		"terminal.activateEnvironment":	true,
+		//"python.languageServer": "Pylance",
 		"python.linting.pylintEnabled": true,
-		"python.linting.pylintPath": "pylint",
-		"python.linting.enabled": true
+		"python.linting.enabled": true,
+		"python.defaultInterpreterPath": "${workspaceFolder}/env/bin/python",
+		"python.pythonPath": "${workspaceFolder}/env/bin/python",
+
 	},
 	"remoteUser": "vscode",
-	"postCreateCommand": "pip install -r src/requirements.txt",
+	"postCreateCommand": "python3 -m venv env && . env/bin/activate && python -m pip install -U pip && python -m pip install -U ipykernel && python -m pip install -r requirements.txt",
 	"extensions": [
 		"ms-python.python",
-	],
+		//"ms-python.vscode-pylance"
+	]
 }
